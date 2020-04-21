@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_new2_module,group_user_access_new2,model_iti_calls,base.group_user,1,1,1,1
+access_new2_iti_station,group_user_access_new2_station,model_iti_station,base.group_user,1,1,1,1
+access_new2_iti_tags,group_user_access_new2_tags,model_iti_tags,base.group_user,1,1,1,1

@@ -1,0 +1,42 @@
+<odoo>
+    <report
+        id="new2.report_of_calls_multi"
+        model="iti.calls"
+        string="Report of the call Multi"
+        name="new2.report_call_multi_view"
+        file="new2.report_call_multi"
+        report_type="qweb-pdf" />
+
+    <template id="new2.report_call_multi_view">
+        <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                       <t t-foreach="docs" t-as="doc">
+                        <center>
+                          <h2 t-field="doc.name"/>
+                        </center>
+                        <p>From <span t-field="doc.start_call_time"/> to <span t-field="doc.stop_call_time"/></p>
+                      <p>
+                        <span t-field="doc.source"/>
+                      </p>
+                      <p>
+                        <span t-field="doc.destination"/>
+                      </p>
+                       <p>
+                        <span t-field="doc.station.name"/>
+                      </p>
+                        <h3>Tags:</h3>
+                        <ul>
+                            <t t-foreach="doc.tags" t-as="tag">
+                                <li><span t-field="tag.name"/></li>
+                            </t>
+                        </ul>
+                      </t>
+                    </div>
+
+                </t>
+
+        </t>
+    </template>
+
+</odoo>
